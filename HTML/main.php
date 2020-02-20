@@ -7,11 +7,11 @@
 </head>
 
 <body>
-<div class="wrapper">
-    <div class="box">Die erste box</div>
-    <div class="box">Die zweite boxDie zweite boxDie zweite boxDie zweite boxDie zweite boxDie zweite boxDie zweite boxDie zweite boxDie zweite boxDie zweite boxDie zweite boxDie zweite boxDie zweite boxDie zweite boxDie zweite boxDie zweite boxDie zweite boxDie zweite boxDie zweite boxDie zweite boxDie zweite box</div>
-    <div class="box">Die dritte box</div>
-    <div class="box">Die viere box</div>
-</div>
+<?php 
+require("header.php");
+?>
+
+
+
 </body>
 </html>

@@ -1,8 +1,25 @@
-.wrapper {
+
+.wrapper_Header {
     display: flex;
-    flex-wrap: nowrap;
+    background-color: lightgrey;
+    justify-content: flex-start;
 }
+/* Header Bild + Links-----------------*/
 .box {
-    background-color: aqua;
+    background-color: white;
     margin: 5px;
+}
+.a {
+    flex-grow: 5;
+}
+.b {
+    flex-grow: 1;
+    align-self: flex-end;
+}
+.img {
+    width: 90%;
+    height: auto;
+}
+a {
+    text-decoration: none;
 }
