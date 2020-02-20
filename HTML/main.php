@@ -7,10 +7,18 @@
 </head>
 
 <body>
-<?php 
-require("header.php");
-?>
-
+<!--Header-------- -->
+    <?php 
+        require("header.php");
+    ?>
+<!--Main-------- -->
+    <?php 
+        require("login.php");
+    ?>
+<!--Footer-------- -->
+    <?php 
+        require("footer.php");
+    ?>
 
 
 </body>

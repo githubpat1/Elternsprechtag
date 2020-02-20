@@ -1,25 +1,37 @@
-
-.wrapper_Header {
+/*HTML allegmein*/
+body {
     display: flex;
-    background-color: lightgrey;
-    justify-content: flex-start;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    flex-direction: column;
+}
+a {
+    text-decoration: none;
 }
 /* Header Bild + Links-----------------*/
-.box {
-    background-color: white;
-    margin: 5px;
-}
-.a {
-    flex-grow: 5;
-}
-.b {
-    flex-grow: 1;
-    align-self: flex-end;
+header {
+
+    background-color: grey;
 }
 .img {
     width: 90%;
     height: auto;
 }
-a {
-    text-decoration: none;
+.b {
+    background-color: lightblue;
 }
+/*Main--------------------------------------*/
+main{
+    min-height: 5em;
+    flex: 1;
+    background-color: lightgray;
+}
+/*Footer--------------------------------------*/
+footer {
+    background-color: darkgrey;
+}
+@media screen and (max-width: 1200px) {
+
+    }
