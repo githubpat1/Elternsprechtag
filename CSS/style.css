@@ -1,0 +1,8 @@
+.wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.box {
+    background-color: aqua;
+    margin: 5px;
+}
