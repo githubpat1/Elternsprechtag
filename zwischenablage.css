@@ -1,0 +1,87 @@
+p {
+    line-height: 1.25em;
+    font-weight: 100;
+    color: rgb(47, 45, 44);
+    margin: 0em;
+    padding: 1.25em;
+    text-align: justify; /*BLocksatz*/
+}
+h2 {
+    font-size: 1.563em;
+    line-height: 1.8em;
+    font-weight: 100;
+    color: rgb(47, 45, 44);
+    margin: 0em;
+    padding: 1.25em;
+    text-align: left;
+}
+/* Navigation (Startseite, Kontakt) ------------------------------------------------*/
+nav {
+    display: block;
+    height: 2.5em;
+    background: rgb(255, 255, 255);
+    text-align: center;
+}
+nav ul {
+    display: block;
+}
+nav ul li {
+    display: inline;
+    margin: 0em 0.188em 0em 0.188em;
+}
+nav ul li a {
+    color: rgb(69, 64, 64);
+    font-size: 1.125em;
+    line-height: 2.5em;
+    padding: 0.563em 0.938em 0.375em 0.983em;
+}
+nav ul li a:hover {
+   background: rgb(255, 255, 255);
+   border-bottom: 0.188em solid rgb(241, 131, 4);
+}
+nav ul li a:active {
+    border-bottom: 0.188em solid rgb(241, 131, 4);
+ }
+ /* Main Bereich -------------------------------------------*/
+ main {
+    display: block;
+    width: 96%;
+    max-width: 980px;
+    margin: 1.25em auto; /*auto = seitenverhältnis automatisch bestimmen*/
+    padding: 0em;
+    flex-grow: 1;
+ }
+ main article {
+     display: inline-block;
+ }
+ /*Footer ----------------------------------------------------*/
+ footer ul li {
+    display: inline;
+ }
+header, main, footer {
+    flex-shrink: 0;
+}
+#wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+/* Menu Leiste plus Logo------------------------------------------------*/
+#menubar {
+    display: flex; /*Sorgt dafür das die Leiste über die ganze breite der Webseite geht*/
+    background-color: rgb(255, 255, 255);
+}
+#menubar ul {
+    display: flex;
+    width: 2em;
+}
+#menubar ul li {
+    display: flex; /*Die Auflistungspunkte werden in einer Linie und nicht mehr untereinander dargestellt*/
+}
+/* Header (Überschrift 'Elternsprechtag') ------------------------------------------------*/
+header {
+    display: flex;
+    background: rgb(0, 92, 169);
+    text-align: center;
+}

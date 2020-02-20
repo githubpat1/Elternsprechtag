@@ -1,0 +1,47 @@
+/*px to em rechner: https://www.w3schools.com/tags/ref_pxtoemconversion.asp*/
+/* Allgemeiner Style ------------------------------------------------ */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    background: rgb(220, 220, 220);
+    font-size: 100%; /*Basis Schriftgröße auf 100% (100% = 16px)*/
+    margin: 0em; /*Relative Größen Angaben zur Basis Größe*/
+    padding: 0em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    font-size: 2.5em; /*Schriftgröße im bezug auf die Schriftgröße von Body (2.5em = 40px)*/
+    line-height: 3.8em;
+    font-weight: 100;
+    color: rgb(220, 220, 220);
+    margin: 0em;
+}
+ul {
+    margin: 0em;
+    padding: 0em;
+}
+li {
+    font-weight: 100;
+    color: rgb(47, 45, 44);
+    line-height: 7.0em;
+    margin: 0em;
+    padding: 0em;
+    margin: 0.313em 0em 0.1313 0em; /*'Oben' 'Rechts' 'Unten' 'Links'*/
+}
+img {
+    width: 90%; /*entspricht der Größe des Elternelements*/
+    height: auto;
+    max-width: 40%; /*Bilder werden nicht verpixelt dargestellt*/
+}
+a{
+    text-decoration: none; /*Links ohne unterstrich darstellen*/
+}
+/*Header*/
+header {
+    background: rgb(0, 92, 169);
+}
+#container {
+    display: flex;
+}
