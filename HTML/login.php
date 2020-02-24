@@ -13,7 +13,7 @@
       <p><input type="submit" name="login" value="Login" /></input></p>
     </form>
     </div>
-    </main>
+  </main>
 
 
     <?php
