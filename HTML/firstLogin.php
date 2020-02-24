@@ -7,16 +7,16 @@
 </head>
 
 <body>
-<!--Header-------- -->
-    <?php 
+<!--Header--------->
+    <?php
         require("header.php");
     ?>
-<!--Main-------- -->
-    <?php 
+<!--<main>  -->
+    <?php
         require("main.php");
     ?>
-<!--Footer-------- -->
-    <?php 
+<!--footer- -->
+    <?php
         require("footer.php");
     ?>
 
