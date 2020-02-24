@@ -12,9 +12,13 @@
         require("header.php");
     ?>
 <!--<main>  -->
-    <?php
-        require("main.php");
-    ?>
+<div class="wrapper_main">
+<h2>Login</h2>
+<form name="form" action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
+  <p><input type="password" name="password" placeholder="Passwort"></p>
+  <p><input type="submit" name="login" value="Login" /></input></p>
+</form>
+</div>
 <!--footer- -->
     <?php
         require("footer.php");
