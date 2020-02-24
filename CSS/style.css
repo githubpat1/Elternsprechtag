@@ -20,10 +20,12 @@ html, body{
     display: flex;
     flex-direction: column;
     align-items: stretch;
-}
+  }
 
 .wrapper_main{
   flex-grow: 1;
+  /*display: flex;
+  justify-content: center;*/
 }
 
 a {
@@ -41,8 +43,30 @@ footer {
     height: 10%;
     background-color: rgb(66, 66, 66);
     flex-shrink: 0;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.wrapper_footer{
+  display: flex;
+  flex-direction: row;
+}
+
+.box_footer{
+  display: flex;
+}
+
+.box_footer a{
+  color: white;
+  border-left: 1px solid white;
+  padding: 0px 1rem;
+}
+
+.wrapper_footer .box_footer:first-child a{
+  border-left: none;
+}
+/*Whatever hiernach kommt*/
 .header_links {
     padding: 1em;
 }
