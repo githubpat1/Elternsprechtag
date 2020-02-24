@@ -18,27 +18,5 @@
     /*if(isset($_SESSION['userid'])){
       header("Location: ../index.php");
     }*/
-/*
-    $username = $_POST["username"];
-    $password = $_POST["password"];
 
-    $pdo = new PDO('mysql:host=localhost;dbname=elternsprechtag' , 'root', '');
-
-    $statement = $pdo->prepare("SELECT * FROM gaeste WHERE Username = :username");
-    $statement->execute(array('username' => $username));
-    $benutzer = $statement->fetch();
-
-    print_r($benutzer);
-
-    if(!empty($password)){
-      if(!$benutzer || $password != $benutzer['Passwort']){
-        echo $_SESSION['msgError'] = "Benutzername oder Passwort ist falsch";
-        //header("Location: login.php");
-      }else{
-        echo  $_SESSION['userid'] = $benutzer['ID'];
-        echo  $_SESSION['username'] = $username;
-        //header("Location: index.php");
-      }
-    }
-*/
     ?>
