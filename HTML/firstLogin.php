@@ -29,34 +29,31 @@
     ?>
     <?php
 
-    session_start();
-
     /*if(isset($_SESSION['userid'])){
       header("Location: ../index.php");
     }*/
 
-/*
+
     $password = $_POST["password"];
 
     $pdo = new PDO('mysql:host=localhost;dbname=elternsprechtag' , 'root', '');
 
-    $statement = $pdo->prepare("SELECT * FROM bucherindex WHERE UUID = :username");
-    $statement->execute(array('username' => $username));
+    $statement = $pdo->prepare("SELECT * FROM passwort WHERE UUID = :passwort");
+    $statement->execute(array('passwort' => $password));
     $benutzer = $statement->fetch();
 
-    print_r($benutzer);
+    /*print_r($benutzer);*/
 
     if(!empty($password)){
-      if(!$benutzer || $password != $benutzer['Passwort']){
+      if(!$benutzer || $password != $benutzer['UUID']){
         echo $_SESSION['msgError'] = "Benutzername oder Passwort ist falsch";
         //header("Location: login.php");
       }else{
-        echo  $_SESSION['userid'] = $benutzer['ID'];
-        echo  $_SESSION['username'] = $username;
-        //header("Location: index.php");
+        $_SESSION['userpwid'] = $benutzer['UUID'];
+        header("Location: register.php");
       }
     }
-*/
+
     ?>
   </div>
 </body>

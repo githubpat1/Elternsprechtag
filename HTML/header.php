@@ -9,3 +9,7 @@
       <div class="header_links"><a href="">usw</a></div>
   </div>
 </header>
+
+<?php
+session_start();
+?>

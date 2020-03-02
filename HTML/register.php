@@ -30,6 +30,11 @@
 <!--footer- -->
     <?php
         require("footer.php");
+
+        if(!isset($_SESSION['userpwid'])){
+          //header("Location: .php");
+          echo "bitte anmelden";
+        }
     ?>
   </div>
 </body>
