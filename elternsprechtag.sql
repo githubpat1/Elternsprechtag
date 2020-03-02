@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 24. Feb 2020 um 11:04
+-- Erstellungszeit: 02. Mrz 2020 um 09:14
 -- Server-Version: 5.6.21
 -- PHP-Version: 5.6.3
 
@@ -58,6 +58,13 @@ CREATE TABLE IF NOT EXISTS `lehrer` (
 CREATE TABLE IF NOT EXISTS `passwort` (
   `UUID` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Daten für Tabelle `passwort`
+--
+
+INSERT INTO `passwort` (`UUID`) VALUES
+('asdf');
 
 -- --------------------------------------------------------
 
@@ -134,7 +141,7 @@ ALTER TABLE `schülergruppe`
 -- Indizes für die Tabelle `termine`
 --
 ALTER TABLE `termine`
-  ADD PRIMARY KEY (`Kürzel`,`Uhrzeit`), ADD KEY `anmeldung` (`anmeldung`,`Schülergruppe`);
+  ADD PRIMARY KEY (`Kürzel`,`Uhrzeit`), ADD KEY `anmeldung` (`anmeldung`,`Schülergruppe`), ADD KEY `Schülergruppe` (`Schülergruppe`);
 
 --
 -- AUTO_INCREMENT für exportierte Tabellen
@@ -159,6 +166,14 @@ ALTER TABLE `schüler`
 --
 ALTER TABLE `schülergruppe`
 ADD CONSTRAINT `schülergruppe_ibfk_1` FOREIGN KEY (`Schüler`) REFERENCES `schüler` (`UUID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints der Tabelle `termine`
+--
+ALTER TABLE `termine`
+ADD CONSTRAINT `termine_ibfk_1` FOREIGN KEY (`Schülergruppe`) REFERENCES `schülergruppe` (`Gruppen_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `termine_ibfk_2` FOREIGN KEY (`anmeldung`) REFERENCES `bucherindex` (`UUID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `termine_ibfk_3` FOREIGN KEY (`Kürzel`) REFERENCES `lehrer` (`Kürzel`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
