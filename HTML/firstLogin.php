@@ -15,9 +15,11 @@
 <!--<main>  -->
     <div class="wrapper_main">
       <div class="wrapper_login">
-        <h2>Registrierung</h2>
+        <h2>Firsttime Login</h2>
         <form name="form" action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
           <p><input type="password" name="password" placeholder="Passwort"></p>
+          <p><input type="submit" name="login" value="Registrieren" /></input></p>
+          <p><a href="">Schon Registriert? Dann hier klicken zum Login</a></p>
         </form>
       </div>
     </div>
@@ -25,7 +27,6 @@
     <?php
         require("footer.php");
     ?>
-
     <?php
 
     session_start();
