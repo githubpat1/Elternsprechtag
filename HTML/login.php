@@ -17,9 +17,7 @@
       <div class="wrapper_login">
         <h2>Login</h2>
         <form name="form" action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
-          <p><input type="text" name="vorname" placeholder="Vorname"></p>
-          <p><input type="text" name="nachname" placeholder="Nachname"></p>
-
+          <p><input type="text" name="username" placeholder="Benutzername"></p>
           <p><input type="password" name="password" placeholder="Passwort"></p>
           <p><input type="submit" name="login" value="Login" /></input></p>
           <p><a href="">Hier klicken zum Registrieren</a></p>
