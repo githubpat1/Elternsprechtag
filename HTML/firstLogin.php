@@ -42,7 +42,7 @@
     $statement->execute(array('passwort' => $password));
     $benutzer = $statement->fetch();
 
-    /*print_r($benutzer);*/
+    print_r($benutzer);
 
     if(!empty($password)){
       if(!$benutzer || $password != $benutzer['UUID']){

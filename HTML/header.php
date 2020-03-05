@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <header>
   <div class="bild">
       <div class="header_bild"><a href=""><img src="../Bilder/bbs-syke_logo.png" alt="Logo BBS Syke"></a></div>
@@ -9,7 +12,3 @@
       <div class="header_links"><a href="">usw</a></div>
   </div>
 </header>
-
-<?php
-session_start();
-?>

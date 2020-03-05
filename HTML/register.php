@@ -16,7 +16,7 @@
     <div class="wrapper_main">
       <div class="wrapper_login">
         <h2>Registrierung</h2>
-        <form name="form" action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
+        <form name="form" action="register.inc.php" method="POST">
           <p><input type="text" name="firstname" placeholder="Vorname"></p>
           <p><input type="text" name="lastname" placeholder="Nachname"></p>
           <p><input type="text" name="username" placeholder="Benutzername"></p>

@@ -1,7 +1,13 @@
 <?php
+
+require("header.php");
+echo $_SESSION["userpwid"];
 if(!isset($_SESSION['userpwid'])){
   header("Location: firstLogin.php");
 }
+
+
+$error = false;
 
 $firstname = $_POST["firstname"];
 $lastname = $_POST["lastname"];
@@ -22,7 +28,7 @@ if(!$error && $password != $password2){
 }
 
 if(!$error){
-$statement = $pdo->prepare("SELECT * FROM bucherindex WHERE benutzername = :username");
+$statement = $pdo->prepare("SELECT * FROM bucherindex WHERE Benutzername = :username");
 $erg = $statement->execute(array('username' => $username));
 $benutzer = $statement->fetch();
 
@@ -34,11 +40,16 @@ $benutzer = $statement->fetch();
 
 /*print_r($benutzer);*/
 if(!$error){
-  $statement = $pdo->prepare("INSERT INTO bucherindex (benutzername,vorname,nachname,passwort) VALUES (:benutzername,:firstname,:lastname,:password)");
-  $statement->execute(array('firstname' => $firstname, 'lastname' => $lastname, 'password' => $password));
+  $statement = $pdo->prepare("INSERT INTO bucherindex (Benutzername,Vorname,Nachname,Passwort) VALUES (:username,:firstname,:lastname,:password)");
+  $statement->execute(array('username' => $username ,'firstname' => $firstname, 'lastname' => $lastname, 'password' => $password));
 
-  $statement = $pdo->prepare("DELET FROM passwort WHERE UUID = :userpwid");
-  $statement->execute(array('userpwid' => $_SESSION['userpwid']));
+  $statement2 = $pdo->prepare("DELETE FROM passwort WHERE UUID = :userpwid");
+  $erg2 = $statement2->execute(array('userpwid' => $_SESSION['userpwid']));
+
+
 
   session_unset();
+
+  echo "yes";
+  //header("Location: main.php");
 }
