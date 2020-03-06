@@ -30,9 +30,9 @@
     ?>
     <?php
 
-    /*if(isset($_SESSION['userid'])){
-      header("Location: ../index.php");
-    }*/
+    if(isset($_SESSION['userid'])){
+      header("Location: main.php");
+    }
 
     $username = $_POST['username'];
     $password = $_POST["password"];
@@ -50,9 +50,9 @@
         echo $_SESSION['msgError'] = "Benutzername oder Passwort ist falsch";
         //header("Location: login.php");
       }else{
-        echo  $_SESSION['userid'] = $benutzer['UUID'];
-        echo  $_SESSION['username'] = $username;
-        //header("Location: index.php");
+        $_SESSION['userid'] = $benutzer['UUID'];
+        $_SESSION['username'] = $username;
+        header("Location: main.php");
       }
     }
 

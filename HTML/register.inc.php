@@ -49,6 +49,7 @@ if(!$error){
 
 
   session_unset();
+  session_destroy();
 
   echo "yes";
   //header("Location: main.php");

@@ -128,3 +128,19 @@ footer {
 @media screen and (max-width: 1200px) {
 
     }
+
+/*Lehrer list*/
+
+.userwrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.userrow{
+  display: flex;
+}
+
+.userrow div{
+  border: 1px solid black;
+  padding: 5px;
+}

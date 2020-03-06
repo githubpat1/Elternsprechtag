@@ -11,6 +11,10 @@
 <!--Header--------->
     <?php
         require("header.php");
+
+        if(!isset($_SESSION['userpwid'])){
+          header("Location: firstLogin.php");
+        }
     ?>
 <!--<main>  -->
     <div class="wrapper_main">
@@ -29,9 +33,6 @@
 <!--footer- -->
     <?php
         require("footer.php");
-
-
-
 
 
     ?>

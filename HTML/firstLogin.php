@@ -29,9 +29,9 @@
     ?>
     <?php
 
-    /*if(isset($_SESSION['userid'])){
-      header("Location: ../index.php");
-    }*/
+    if(isset($_SESSION['userid'])){
+      header("Location: main.php");
+    }
 
 
     $password = $_POST["password"];
