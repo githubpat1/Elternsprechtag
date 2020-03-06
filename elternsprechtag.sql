@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 02. Mrz 2020 um 09:14
+-- Erstellungszeit: 06. Mrz 2020 um 12:50
 -- Server-Version: 5.6.21
 -- PHP-Version: 5.6.3
 
@@ -28,12 +28,20 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `bucherindex` (
   `UUID` int(50) NOT NULL,
-  `Geschlecht` varchar(8) NOT NULL,
+  `Benutzername` varchar(30) NOT NULL,
   `Vorname` varchar(30) NOT NULL,
   `Nachname` varchar(30) NOT NULL,
   `Passwort` varchar(50) NOT NULL,
   `typ` varchar(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+
+--
+-- Daten für Tabelle `bucherindex`
+--
+
+INSERT INTO `bucherindex` (`UUID`, `Benutzername`, `Vorname`, `Nachname`, `Passwort`, `typ`) VALUES
+(14, 'wad', 'wad', 'wad', '12345678', ''),
+(15, 'wad2', 'wad', 'wad', '12345678', '');
 
 -- --------------------------------------------------------
 
@@ -42,12 +50,21 @@ CREATE TABLE IF NOT EXISTS `bucherindex` (
 --
 
 CREATE TABLE IF NOT EXISTS `lehrer` (
-  `Kürzel` varchar(5) NOT NULL,
+  `Krzl` varchar(5) NOT NULL,
   `Geschlecht` varchar(8) NOT NULL,
   `Nachname` varchar(30) NOT NULL,
   `Raum` varchar(5) NOT NULL,
   `Passwort` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Daten für Tabelle `lehrer`
+--
+
+INSERT INTO `lehrer` (`Krzl`, `Geschlecht`, `Nachname`, `Raum`, `Passwort`) VALUES
+('HEK', 'Mann', 'Rudolf', 'B1202', 'test123'),
+('HHJ', 'Frau', 'Heinke', 'B1303', ''),
+('WEZ', 'Frau', 'Welke', 'B2101', '');
 
 -- --------------------------------------------------------
 
@@ -117,7 +134,7 @@ ALTER TABLE `bucherindex`
 -- Indizes für die Tabelle `lehrer`
 --
 ALTER TABLE `lehrer`
-  ADD PRIMARY KEY (`Kürzel`);
+  ADD PRIMARY KEY (`Krzl`);
 
 --
 -- Indizes für die Tabelle `passwort`
@@ -151,7 +168,7 @@ ALTER TABLE `termine`
 -- AUTO_INCREMENT für Tabelle `bucherindex`
 --
 ALTER TABLE `bucherindex`
-  MODIFY `UUID` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `UUID` int(50) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT für Tabelle `schüler`
 --
@@ -173,7 +190,7 @@ ADD CONSTRAINT `schülergruppe_ibfk_1` FOREIGN KEY (`Schüler`) REFERENCES `sch�
 ALTER TABLE `termine`
 ADD CONSTRAINT `termine_ibfk_1` FOREIGN KEY (`Schülergruppe`) REFERENCES `schülergruppe` (`Gruppen_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
 ADD CONSTRAINT `termine_ibfk_2` FOREIGN KEY (`anmeldung`) REFERENCES `bucherindex` (`UUID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-ADD CONSTRAINT `termine_ibfk_3` FOREIGN KEY (`Kürzel`) REFERENCES `lehrer` (`Kürzel`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ADD CONSTRAINT `termine_ibfk_3` FOREIGN KEY (`Kürzel`) REFERENCES `lehrer` (`Krzl`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
