@@ -2,6 +2,8 @@
   .links a:not(:first-child) {display: none;}
   .links a.icon {
     display: flex;
+    width: auto;
+    height: auto;
 
   }
 }

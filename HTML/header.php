@@ -1,6 +1,18 @@
 <?php
 session_start();
 ?>
+
+<script>
+function menuResponsive() {
+  var x = document.getElementById("test");
+  if (x.className === "links") {
+    x.className += " responsive";
+  } else {
+    x.className = "links";
+  }
+}
+</script>
+
 <header>
   <div class="bild">
       <div class="header_bild"><a href=""><img src="../Bilder/bbs-syke_logo.png" alt="Logo BBS Syke"></a></div>
