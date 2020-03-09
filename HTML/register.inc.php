@@ -18,6 +18,11 @@ $password2 = $_POST["password2"];
 
 $pdo = new PDO('mysql:host=localhost;dbname=elternsprechtag' , 'root', '');
 
+if(strlen($firstname) === 0 || strlen($lastname) === 0 || strlen($username) === 0){
+  echo "Bitte Namen eingeben";
+  $error = true;
+}
+
 if(strlen($password) < 8){
     echo "Bitte Mindestens ein 8 Stelliges Passwort eingeben";
     $error = true;
