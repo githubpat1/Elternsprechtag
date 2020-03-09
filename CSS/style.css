@@ -6,8 +6,6 @@ body {
     margin: 0;
     padding: 0;
     flex-direction: column;
-
-
 }
 
 html, body{
@@ -30,7 +28,6 @@ html, body{
 }
 
 /*Login-------------------------LUL*/
-
 .wrapper_login{
   border: 5px solid #005ca9;
   border-radius: 40px;
@@ -74,6 +71,9 @@ header .links{
 header .links .header_links{
   display: flex;
 }
+.links .icon {
+  display: none;
+}
 
 .bild{
   display: flex;
@@ -89,7 +89,6 @@ img {
 .header_links {
     padding: 1em;
 }
-
 
 /*Footer--------------------------------------*/
 footer {
@@ -140,7 +139,17 @@ footer {
   display: flex;
 }
 
-.userrow div{
+.userrow .userbtn{
+  width: 10em;
+  padding: 0.5em;
+}
+
+.userrow .userelement{
   border: 1px solid black;
   width: 10em;
+  padding: 0.5em;
+}
+
+.userrow form {
+  border: 1px solid black;
 }

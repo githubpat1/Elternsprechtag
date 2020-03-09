@@ -30,12 +30,12 @@
             for($i = 0; $i < sizeof($user); $i++){
                     echo '
                     <div class="userrow">
-                        <div>' .$user[$i]['Geschlecht']. ' ' .$user[$i]['Nachname'].'</div>
-                        <div>Kürzel:'.$user[$i]['Krzl']. '</div>
-                        <div>Raum:'.$user[$i]['Raum'].'</div>
-                        <form action="terminplaner.php" method="POST">
-                            <button type="submit" name="select" value="'.$user[$i]['Krzl'].'">Termin Festlegen</button>
-                        </form>
+                        <div class="userelement">' .$user[$i]['Geschlecht']. ' ' .$user[$i]['Nachname'].'</div>
+                        <div class="userelement">Kürzel:'.$user[$i]['Krzl']. '</div>
+                        <div class="userelement">Raum:'.$user[$i]['Raum'].'</div>
+                          <form action="terminplaner.php" method="POST">
+                              <button class="userbtn" type="submit" name="select" value="'.$user[$i]['Krzl'].'">Termin Festlegen</button>
+                          </form>
                     </div>';
             }
             echo '</div>';
