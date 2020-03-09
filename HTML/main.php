@@ -25,6 +25,12 @@
 <!--<main>  -->
 
   <div class="wrapper_main">
+
+    <form action="terminplaner.php" method="POST">
+        <input class="userbtn" type="text" name="select" value="Suchen">Termin Festlegen</input>
+        <button class="userbtn" type="submit" name="select" value="'.$user[$i]['Krzl'].'">Suchen</button>
+    </form>
+
     <?php
           echo '<div class="userwrapper">';
             for($i = 0; $i < sizeof($user); $i++){
