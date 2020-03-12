@@ -25,6 +25,9 @@ html, body{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
+
 }
 
 /*Login-------------------------LUL*/
@@ -152,4 +155,8 @@ footer {
 
 .userrow form {
   border: 1px solid black;
+}
+
+.wrapper_suche{
+  display: flex;
 }
