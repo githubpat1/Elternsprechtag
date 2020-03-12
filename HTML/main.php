@@ -16,23 +16,42 @@
           header("Location: login.php");
         }
 
+
+
         $pdo = new PDO('mysql:host=localhost;dbname=elternsprechtag' , 'root', '');
 
         $statement = $pdo->prepare("SELECT * FROM lehrer");
         $statement->execute();
         $user = $statement->fetchAll();
+
+        $nachname = "Nachname";
     ?>
 <!--<main>  -->
 
   <div class="wrapper_main">
 
-    <form action="terminplaner.php" method="POST">
-        <input class="userbtn" type="text" name="select" value="Suchen">Termin Festlegen</input>
-        <button class="userbtn" type="submit" name="select" value="'.$user[$i]['Krzl'].'">Suchen</button>
-    </form>
+<div class="wrapper_suche">
+    <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
+        <input class="userbtn" type="search" list="lehrer" name="lehrerselect" placeholder="Lehrer"></input>
+        <datalist id="lehrer">
+          <?php
+            for($i = 0; $i < sizeof($user); $i++){
+              echo "<option value='"; echo $user[$i][$nachname]; echo "'/>";
+            }
 
+          ?>
+        </datalist>
+        <button class="userbtn" type="submit" value="Rudolf">Suchen</button>
+    </form>
+</div>
     <?php
+    echo $_POST["lehrerselect"];
           echo '<div class="userwrapper">';
+          if($_POST["lehrerselect"] === $user[$i]["nachname"]){
+            
+          }else{
+
+          }
             for($i = 0; $i < sizeof($user); $i++){
                     echo '
                     <div class="userrow">
