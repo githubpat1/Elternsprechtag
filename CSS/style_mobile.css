@@ -1,23 +1,22 @@
+/*Allgemeiner CSS CODE, muss noch rüber in main css*/
+
+
 @media screen and (max-width: 600px) {
-  .links a:not(:first-child) {display: none;}
-  .links a.icon {
-    display: flex;
-    width: auto;
-    height: auto;
+  html, body{
+    width: 100%;
+    height: 100%;
 
   }
 }
 
 @media screen and (max-width: 600px) {
-  .links.responsive {position: relative;}
-  .links.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+  .links  {
+    display: flex;
+    width: auto;
+    height: auto;
+
+    flex-direction: column;
+    background-color: yellow;
   }
-  .links.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+
 }
