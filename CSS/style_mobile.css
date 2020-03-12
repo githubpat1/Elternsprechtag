@@ -1,22 +1,19 @@
 /*Allgemeiner CSS CODE, muss noch rüber in main css*/
 
-
 @media screen and (max-width: 600px) {
   html, body{
-    width: 100%;
-    height: 100%;
-
+    width: 106%;
+    height: 105%;
   }
-}
+  header {
+      height: auto;
+      background-color: white;
+      display: block;
 
-@media screen and (max-width: 600px) {
-  .links  {
-    display: flex;
-    width: auto;
-    height: auto;
-
-    flex-direction: column;
-    background-color: yellow;
+      border-bottom: 5px solid #005ca9;
+  }
+  .links {
+    background-color: red;
   }
 
 }
