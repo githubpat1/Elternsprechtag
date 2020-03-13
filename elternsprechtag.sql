@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 06. Mrz 2020 um 12:50
+-- Erstellungszeit: 13. Mrz 2020 um 13:00
 -- Server-Version: 5.6.21
 -- PHP-Version: 5.6.3
 
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `lehrer` (
 --
 
 INSERT INTO `lehrer` (`Krzl`, `Geschlecht`, `Nachname`, `Raum`, `Passwort`) VALUES
-('HEK', 'Mann', 'Rudolf', 'B1202', 'test123'),
+('HEK', 'Herr', 'Rudolf', 'B1202', 'test123'),
 ('HHJ', 'Frau', 'Heinke', 'B1303', ''),
 ('WEZ', 'Frau', 'Welke', 'B2101', '');
 
@@ -82,6 +82,25 @@ CREATE TABLE IF NOT EXISTS `passwort` (
 
 INSERT INTO `passwort` (`UUID`) VALUES
 ('asdf');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `raum`
+--
+
+CREATE TABLE IF NOT EXISTS `raum` (
+  `Nr` varchar(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Daten für Tabelle `raum`
+--
+
+INSERT INTO `raum` (`Nr`) VALUES
+('B1118'),
+('B1162'),
+('B1202');
 
 -- --------------------------------------------------------
 
@@ -134,13 +153,19 @@ ALTER TABLE `bucherindex`
 -- Indizes für die Tabelle `lehrer`
 --
 ALTER TABLE `lehrer`
-  ADD PRIMARY KEY (`Krzl`);
+  ADD PRIMARY KEY (`Krzl`), ADD KEY `Raum` (`Raum`);
 
 --
 -- Indizes für die Tabelle `passwort`
 --
 ALTER TABLE `passwort`
   ADD PRIMARY KEY (`UUID`);
+
+--
+-- Indizes für die Tabelle `raum`
+--
+ALTER TABLE `raum`
+  ADD PRIMARY KEY (`Nr`);
 
 --
 -- Indizes für die Tabelle `schüler`
