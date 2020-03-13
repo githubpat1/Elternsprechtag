@@ -20,7 +20,7 @@
         <form name="form" action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
           <p><input type="password" name="password" placeholder="Passwort"></p>
           <p><input type="submit" name="login" value="Registrieren" /></input></p>
-          <p><a href="">Schon Registriert? Dann hier klicken zum Login</a></p>
+          <p><a href="login.php" id="regiLink">Schon Registriert? Dann hier klicken zum Login</a></p>
         </form>
       </div>
     </div>

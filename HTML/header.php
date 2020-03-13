@@ -9,6 +9,6 @@ session_start();
   <div class="links" id="test">
       <a class="header_links" id="firstLink" href="https://www.bbs-syke.de/">Startseite</a>
       <a class="header_links" href="https://www.bbs-syke.de/portal/kontakt.html">Kontakt</a>
-      <a class="header_links" href="http://localhost/Elternsprechtag/HTML/login.php">Login</a>
+      <a class="header_links" href="login.php">Login</a>
   </div>
 </header>

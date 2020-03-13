@@ -62,7 +62,7 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
-    border-bottom: 5px solid #005ca9;
+    border-bottom: 5px solid rgb(0, 92, 169);
 }
 
 header .links{
@@ -126,11 +126,6 @@ footer {
 .wrapper_footer {
     padding: 1em;
 }
-
-@media screen and (max-width: 1200px) {
-
-    }
-
 /*Lehrer list*/
 
 .userwrapper{

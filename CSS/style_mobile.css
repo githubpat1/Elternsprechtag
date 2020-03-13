@@ -2,15 +2,13 @@
 a:visited {
   color: rgb(255, 255, 255);
 }
-
 a:hover{
   color: rgb(0, 92, 169);
 }
 
 @media screen and (max-width: 600px) { /*Galaxy S5*/
-  html, body{
-    width: 105%;
-    height: 105%;
+  #regiLink{
+    color: rgb(0, 92, 169);
   }
   header {
     display: list-item;
@@ -18,20 +16,21 @@ a:hover{
   header .links{
     display: flex;
     flex-direction: column;
-
   }
   .header_links {
     display: flex;
     justify-content: center;
     border-top: 1px solid rgb(255, 255, 255);
-    background-color: rgb(66, 66, 66);
+    background-color: rgb(115, 115, 115);
   }
   .links {
     display: flex;
-
   }
   #firstLink {
     border-top: 5px solid rgb(0, 92, 169);
   }
-
+  .wrapper_login{
+    border: none;
+    padding: 40px;
+  }
 }
