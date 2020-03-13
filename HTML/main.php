@@ -56,7 +56,7 @@
                     <div class="userelement">' .$user[$i]['Geschlecht']. ' ' .$user[$i]['Nachname'].'</div>
                     <div class="userelement">Kürzel:'.$user[$i]['Krzl']. '</div>
                     <div class="userelement">Raum:'.$user[$i]['Raum'].'</div>
-                      <form action="terminplaner.php" method="POST">
+                      <form action="termin.php" method="POST">
                           <button class="userbtn" type="submit" name="select" value="'.$user[$i]['Krzl'].'">Termin Festlegen</button>
                       </form>
                 </div>';
