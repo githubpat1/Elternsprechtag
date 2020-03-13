@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>BBS Syke</title>
-    <meta name="viewport" content="width=device-width, inital-scale=10.0"/>
+    <meta name="viewport" content="width=device-width, inital-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href ="../CSS/style.css">
     <link rel="stylesheet" type="text/css" href ="../CSS/style_mobile.css">
 </head>
@@ -35,19 +35,20 @@
     }
 
 
-    $password = $_POST["password"];
 
-    $pdo = new PDO('mysql:host=localhost;dbname=elternsprechtag' , 'root', '');
+    if(!empty($_POST["password"])){
+      $pdo = new PDO('mysql:host=localhost;dbname=elternsprechtag' , 'root', '');
 
-    $statement = $pdo->prepare("SELECT * FROM passwort WHERE UUID = :passwort");
-    $statement->execute(array('passwort' => $password));
-    $benutzer = $statement->fetch();
+      $statement = $pdo->prepare("SELECT * FROM passwort WHERE UUID = :passwort");
+      $statement->execute(array('passwort' => $_POST["password"]));
+      $benutzer = $statement->fetch();
 
-    print_r($benutzer);
+      print_r($benutzer);
 
-    if(!empty($password)){
-      if(!$benutzer || $password != $benutzer['UUID']){
-        echo $_SESSION['msgError'] = "Benutzername oder Passwort ist falsch";
+      if(!$benutzer || $_POST["password"] != $benutzer['UUID']){
+        if(!empty($_POST["password"])){
+          echo $_SESSION['msgError'] = "Passwort ist falsch";
+        }
         //header("Location: login.php");
       }else{
         $_SESSION['userpwid'] = $benutzer['UUID'];

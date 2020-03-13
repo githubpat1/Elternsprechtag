@@ -1,19 +1,26 @@
 /*Allgemeiner CSS CODE, muss noch rüber in main css*/
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) { /*IPHONE 5*/
   html, body{
-    width: 106%;
-    height: 105%;
+    width: 105%;
+    height: 107%;
   }
   header {
-      height: auto;
-      background-color: white;
-      display: block;
+    display: list-item;
+  }
+  header .links{
+    display: flex;
+    flex-direction: column;
 
-      border-bottom: 5px solid #005ca9;
+  }
+  .header_links {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid black;
   }
   .links {
-    background-color: red;
+    display: flex;
+
   }
 
 }

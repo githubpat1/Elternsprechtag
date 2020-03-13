@@ -8,7 +8,7 @@ session_start();
   </div>
   <div class="links" id="test">
       <a class="header_links" id="q" href="https://www.bbs-syke.de/">Startseite</a>
-      <a class="header_links" id="q linksNachUnten" href="https://www.bbs-syke.de/portal/kontakt.html">Kontakt</a>
-      <a class="header_links" id="q linksNachUnten" href="http://localhost/Elternsprechtag/HTML/login.php">Login</a>
+      <a class="header_links" id="q" href="https://www.bbs-syke.de/portal/kontakt.html">Kontakt</a>
+      <a class="header_links" id="q" href="http://localhost/Elternsprechtag/HTML/login.php">Login</a>
   </div>
 </header>

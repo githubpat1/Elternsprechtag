@@ -68,7 +68,7 @@ header {
 header .links{
   display: flex;
   flex-direction: row;
-  width: 60%;
+
 }
 
 header .links .header_links{

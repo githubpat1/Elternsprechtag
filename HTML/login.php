@@ -34,27 +34,34 @@
       header("Location: main.php");
     }
 
-    $username = $_POST['username'];
-    $password = $_POST["password"];
+    if(!empty($_POST["password"])){
+      $username = $_POST['username'];
+      $password = $_POST["password"];
 
-    $pdo = new PDO('mysql:host=localhost;dbname=elternsprechtag' , 'root', '');
+      $pdo = new PDO('mysql:host=localhost;dbname=elternsprechtag' , 'root', '');
 
-    $statement = $pdo->prepare("SELECT * FROM bucherindex WHERE Benutzername = :username");
-    $statement->execute(array('username' => $username));
-    $benutzer = $statement->fetch();
+      $statement = $pdo->prepare("SELECT * FROM bucherindex WHERE Benutzername = :username");
+      $statement->execute(array('username' => $username));
+      $benutzer = $statement->fetch();
+
+      if(!empty($password)){
+        if(!$benutzer || $password != $benutzer['Passwort']){
+          echo $_SESSION['msgError'] = "Benutzername oder Passwort ist falsch";
+          //header("Location: login.php");
+        }else{
+          $_SESSION['userid'] = $benutzer['UUID'];
+          $_SESSION['username'] = $username;
+          header("Location: main.php");
+        }
+      }
+    }
+
+
+
 
     //print_r($benutzer);
 
-    if(!empty($password)){
-      if(!$benutzer || $password != $benutzer['Passwort']){
-        echo $_SESSION['msgError'] = "Benutzername oder Passwort ist falsch";
-        //header("Location: login.php");
-      }else{
-        $_SESSION['userid'] = $benutzer['UUID'];
-        $_SESSION['username'] = $username;
-        header("Location: main.php");
-      }
-    }
+
 
     ?>
   </div>
