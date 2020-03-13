@@ -45,24 +45,25 @@
     </form>
 </div>
     <?php
-    echo $_POST["lehrerselect"];
+
           echo '<div class="userwrapper">';
-          if($_POST["lehrerselect"] === $user[$i]["nachname"]){
-            
-          }else{
+          for($i = 0; $i < sizeof($user); $i++){
+            if (!empty($_POST["lehrerselect"])) {
+              if($_POST["lehrerselect"] === $user[$i]["Nachname"]){
+
+                echo '
+                <div class="userrow">
+                    <div class="userelement">' .$user[$i]['Geschlecht']. ' ' .$user[$i]['Nachname'].'</div>
+                    <div class="userelement">Kürzel:'.$user[$i]['Krzl']. '</div>
+                    <div class="userelement">Raum:'.$user[$i]['Raum'].'</div>
+                      <form action="termin.php" method="POST">
+                          <button class="userbtn" type="submit" name="select" value="'.$user[$i]['Krzl'].'">Termin Festlegen</button>
+                      </form>
+                </div>';
+              }
+            }
 
           }
-            for($i = 0; $i < sizeof($user); $i++){
-                    echo '
-                    <div class="userrow">
-                        <div class="userelement">' .$user[$i]['Geschlecht']. ' ' .$user[$i]['Nachname'].'</div>
-                        <div class="userelement">Kürzel:'.$user[$i]['Krzl']. '</div>
-                        <div class="userelement">Raum:'.$user[$i]['Raum'].'</div>
-                          <form action="terminplaner.php" method="POST">
-                              <button class="userbtn" type="submit" name="select" value="'.$user[$i]['Krzl'].'">Termin Festlegen</button>
-                          </form>
-                    </div>';
-            }
             echo '</div>';
       ?>
   </div>
