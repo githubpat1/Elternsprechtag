@@ -1,9 +1,16 @@
 /*Allgemeiner CSS CODE, muss noch rüber in main css*/
+a:visited {
+  color: rgb(255, 255, 255);
+}
 
-@media screen and (max-width: 600px) { /*IPHONE 5*/
+a:hover{
+  color: rgb(0, 92, 169);
+}
+
+@media screen and (max-width: 600px) { /*Galaxy S5*/
   html, body{
     width: 105%;
-    height: 107%;
+    height: 105%;
   }
   header {
     display: list-item;
@@ -16,11 +23,15 @@
   .header_links {
     display: flex;
     justify-content: center;
-    border-top: 1px solid black;
+    border-top: 1px solid rgb(255, 255, 255);
+    background-color: rgb(66, 66, 66);
   }
   .links {
     display: flex;
 
+  }
+  #firstLink {
+    border-top: 5px solid rgb(0, 92, 169);
   }
 
 }
