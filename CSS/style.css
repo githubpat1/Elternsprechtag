@@ -32,7 +32,7 @@ html, body{
 
 /*Login-------------------------LUL*/
 .wrapper_login{
-  border: 5px solid #005ca9;
+  border: 5px solid rgb(0, 92, 169);
   border-radius: 40px;
   padding: 40px;
 }
@@ -51,18 +51,18 @@ a {
 }
 
 a:hover{
-    color: orange;
+    color: rgb(255, 165, 0);
 }
 
 /* Header Bild + Links-----------------*/
 header {
     height: auto;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
-    border-bottom: 5px solid #005ca9;
+    border-bottom: 5px solid rgb(0, 92, 169);
 }
 
 header .links{
@@ -113,8 +113,8 @@ footer {
 }
 
 .box_footer a{
-  color: white;
-  border-left: 1px solid white;
+  color: rgb(255, 255, 255);
+  border-left: 1px solid rgb(255, 255, 255);
   padding: 0px 1rem;
 }
 
@@ -126,11 +126,6 @@ footer {
 .wrapper_footer {
     padding: 1em;
 }
-
-@media screen and (max-width: 1200px) {
-
-    }
-
 /*Lehrer list*/
 
 .userwrapper{
@@ -148,13 +143,13 @@ footer {
 }
 
 .userrow .userelement{
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
   width: 10em;
   padding: 0.5em;
 }
 
 .userrow form {
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
 }
 
 .wrapper_suche{

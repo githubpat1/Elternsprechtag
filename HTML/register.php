@@ -4,6 +4,7 @@
     <title>BBS Syke</title>
     <meta name="viewport" content="width=device-width, inital-scale=10.0"/>
     <link rel="stylesheet" type="text/css" href ="../CSS/style.css">
+    <link rel="stylesheet" type="text/css" href ="../CSS/style_mobile.css">
 </head>
 
 <body>
